@@ -21,6 +21,11 @@ app.get('/article-three',function(req,res){
     res.send("Article three requested and will be served here");
 });
 
+var counter=0;
+app.get('/counter',function(req,res){
+    res.send(counter.toString());
+});
+
 app.get('/ui/main.js',function(req,res){
      res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
