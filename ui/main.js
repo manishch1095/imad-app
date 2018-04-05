@@ -30,7 +30,7 @@ button.onclick=function(){
     
     //make the request
     request.open('GET','http://manishch1095.imad.hasura-app.io/counter',true);
-    request.get(null);
+    request.send(null);
 };
 
 
