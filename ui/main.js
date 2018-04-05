@@ -21,10 +21,7 @@ button.onclick=function(){
                 
             }
         }
-        else
-        {
-             span.innerHTML="error";
-        }
+       
         //not done yet
     };
     
