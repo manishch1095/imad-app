@@ -10,7 +10,7 @@ button.onclick=function(){
     
     request.onreadystatechange=function(){
         
-        if(request.readyState===XMLHttprequest.DONE){
+        if(request.readyState===XMLHttpRequest.DONE){
             
             //take some action
             if(request.status===200){
@@ -20,6 +20,10 @@ button.onclick=function(){
                 span.innerHTML=counter.toString();
                 
             }
+        }
+        else
+        {
+             span.innerHTML="error";
         }
         //not done yet
     };
