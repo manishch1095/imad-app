@@ -49,7 +49,8 @@ submit.onclick = function(){
             //take some action
             if(request.status===200){
                 //capture a list of manes and render it as a list
-               var names=['name1','name2','name3'];
+               var names=request.responseText;
+               names=JSON.parse(names);
     var list='';
     for( var i=0;i<names.length;i++)
     {
@@ -62,6 +63,9 @@ submit.onclick = function(){
             }
         }
     }
+     //make the request
+    request.open('GET','http://manishch1095.imad.hasura-app.io/submit-name?name='+name,true);
+    request.send(null);
    
 };
 
