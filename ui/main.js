@@ -38,9 +38,18 @@ var submit=document.getElementById('submit_btn');
 submit.onclick = function(){
     
     
+    //create a request
+    var request=new XMLHttpRequest();
     
-    
-    var names=['name1','name2','name3'];
+    //Capture the response and store it in a variable
+    request.onreadystatechange = function (){
+        
+        if(request.readyState===XMLHttpRequest.DONE){
+            
+            //take some action
+            if(request.status===200){
+                //capture a list of manes and render it as a list
+               var names=['name1','name2','name3'];
     var list='';
     for( var i=0;i<names.length;i++)
     {
@@ -49,5 +58,10 @@ submit.onclick = function(){
     }
      var ul=document.getElementById('namelist');
      ul.innerHTML =list;
+                
+            }
+        }
+    }
+   
 };
 
